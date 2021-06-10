@@ -3,6 +3,7 @@ package Pages;
 import Base.TestBase;
 import org.apache.maven.model.Site;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
@@ -17,6 +18,9 @@ public class Page_Home extends TestBase {
     protected static By Wishlist_Link= By.xpath("(//a[contains(.,'Wishlist')])[1]");
     protected static By Search_Field= By.id("small-searchterms");
     protected static By Search_Button= By.xpath("//button[@class='button-1 search-box-button']");
+    protected static By Email_Input_Field=By.id("Email");
+    protected static By Password_Input_Field=By.id("Password");
+    protected static By LogIn_Button=By.xpath("//input[contains(@class,'button-1 login-button')]");
 
 
 
@@ -60,6 +64,18 @@ public class Page_Home extends TestBase {
 
     public static void Click_Search_Button() throws Exception{
         driver.findElement(Search_Button).click();
+    }
+
+    public static void Email_Input_Textbox() throws Exception{
+        driver.findElement(Email_Input_Field).sendKeys("testerselenium11@outlook.com");
+    }
+
+    public static void Password_Input_Textbox()throws Exception{
+        driver.findElement(Password_Input_Field).sendKeys("BosniaPakistan12345");
+    }
+
+    public static void Click_LogIn_Button_For_Login()throws Exception{
+        driver.findElement(LogIn_Button).click();
     }
 
     public static void Verify_User_Is_On_SearchPage() throws Exception{
