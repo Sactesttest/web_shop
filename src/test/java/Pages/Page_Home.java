@@ -21,8 +21,13 @@ public class Page_Home extends TestBase {
     protected static By Email_Input_Field=By.id("Email");
     protected static By Password_Input_Field=By.id("Password");
     protected static By LogIn_Button=By.xpath("//input[contains(@class,'button-1 login-button')]");
-
-
+    protected static By Registration_Formular_Gender=By.id("gender-male");
+    protected static By Registration_Formular_Firstname=By.id("FirstName");
+    protected static By Registration_Formular_Lastname=By.id("LastName");
+    protected static By Registration_Formular_Email=By.id("Email");
+    protected static By Registration_Formular_Password=By.id("Password");
+    protected static By Registration_Formular_ConfirmPassword=By.id("ConfirmPassword");
+    protected static By Registration_Formular_Button=By.id("register-button");
 
 
 
@@ -30,6 +35,31 @@ public class Page_Home extends TestBase {
 
 
     // **** Page Actions ******
+
+
+    public static void Input_Registration_Formular_Gender()throws Exception{
+        driver.findElement(Registration_Formular_Gender).click();
+    }
+
+    public static void Input_Registration_Formular_Firstname()throws Exception{
+        driver.findElement(Registration_Formular_Firstname).sendKeys("test");
+    }
+    public static void Input_Registration_Formular_Lastname()throws Exception{
+        driver.findElement(Registration_Formular_Lastname).sendKeys("test");
+    }
+    public static void Input_Registration_Formular_Email()throws Exception{
+        driver.findElement(Registration_Formular_Email).sendKeys("testerselenium11@outlook.com");
+    }
+    public static void Input_Registration_Formular_Password()throws Exception{
+        driver.findElement(Registration_Formular_Password).sendKeys("BosniaPakistan12345");
+    }
+    public static void Input_Registration_Formular_ConfirmPassword()throws Exception{
+        driver.findElement(Registration_Formular_ConfirmPassword).sendKeys("BosniaPakistan12345");
+    }
+    public static void Input_Registration_Formular_Button()throws Exception{
+        driver.findElement(Registration_Formular_Button).click();
+    }
+
 
     public static void Verify_Logo_On_Header() throws Exception{
         if (driver.findElement(Site_Logo).isDisplayed()){

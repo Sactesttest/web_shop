@@ -30,6 +30,18 @@ public class HomePage extends TestBase {
         Click_LogIn_Button_For_Login();
     }
 
+    @Test (priority=3)
+    public static void Registration()throws Exception{
+        Click_Register_Button();
+        Input_Registration_Formular_Gender();
+        Input_Registration_Formular_Firstname();
+        Input_Registration_Formular_Lastname();
+        Input_Registration_Formular_Email();
+        Input_Registration_Formular_Password();
+        Input_Registration_Formular_ConfirmPassword();
+        Input_Registration_Formular_Button();
+    }
+
     @AfterClass
     public static void Close_Browser() throws Exception{
        driver.quit();
