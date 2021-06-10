@@ -21,6 +21,14 @@ public class HomePage extends TestBase {
         Enter_Value_In_Search_Filed();
         Verify_User_Is_On_SearchPage();
     }
+    @Test (priority=2)
+    public static void LogIn()throws Exception{
+        Click_LogIn_Button();
+        Email_Input_Textbox();
+        Password_Input_Textbox();
+        Thread.sleep(2000);
+        Click_LogIn_Button_For_Login();
+    }
 
     @AfterClass
     public static void Close_Browser() throws Exception{
